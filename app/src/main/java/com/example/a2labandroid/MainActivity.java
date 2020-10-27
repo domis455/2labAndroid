@@ -43,9 +43,15 @@ public class MainActivity extends AppCompatActivity {
     public void btnSelectionClick(View view) {
         Toast.makeText(this, this.spCounterOption.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
 
-        if(this.spCounterOption.getSelectedItem().toString().equalsIgnoreCase(getString(R.string.selection_chars)))
+        String spSelectedOption = this.spCounterOption.getSelectedItem().toString();
+        String charString = getString(R.string.selection_chars);
+
+        if(spSelectedOption.equalsIgnoreCase(charString))
         {
-            this.tvResult.setText(String.valueOf(this.edEnteredText.getText().toString().length()));
+            String enteredUserText = this.edEnteredText.getText().toString();
+            int charsCount = tCounter.getCharsCount(enteredUserText);
+
+            this.tvResult.setText(String.valueOf(charsCount));
         }
         else
         {
