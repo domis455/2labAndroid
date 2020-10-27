@@ -10,10 +10,12 @@
         android:id="@+id/spCounterOption"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="424dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEnteredText"
+        app:layout_constraintTop_toBottomOf="@+id/edEnteredText"
         app:layout_constraintVertical_bias="0.031" />
 
     <Button
@@ -21,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:onClick="btnSelectionClick"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.879"
@@ -39,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spCounterOption" />
 
     <EditText
-        android:id="@+id/etEnteredText"
+        android:id="@+id/edEnteredText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
