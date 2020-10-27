@@ -45,17 +45,19 @@ public class MainActivity extends AppCompatActivity {
 
         String spSelectedOption = this.spCounterOption.getSelectedItem().toString();
         String charString = getString(R.string.selection_chars);
+        String wordString = getString(R.string.selection_words);
 
         if(spSelectedOption.equalsIgnoreCase(charString))
         {
             String enteredUserText = this.edEnteredText.getText().toString();
             int charsCount = tCounter.getCharsCount(enteredUserText);
-
             this.tvResult.setText(String.valueOf(charsCount));
         }
-        else
+        else if(spSelectedOption.equalsIgnoreCase(wordString))
         {
-            Toast.makeText(this, "Not implemented", Toast.LENGTH_SHORT);
+            String enteredUserText = this.edEnteredText.getText().toString();
+            int wordsCount = tCounter.getWordsCount(enteredUserText);
+            this.tvResult.setText(String.valueOf(wordsCount));
         }
     }
 }
